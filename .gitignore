@@ -1,0 +1,20 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# User-specific
+*.user
+*.suo
+.vs/
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+
+# Environment files
+.env
+
+# OS
+.DS_Store
+Thumbs.db
