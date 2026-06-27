@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XFNrb5Y8jUg=",
+  "success": true,
+  "projectFilePath": "/home/artur/Projetos/OrderFlow/shared/PedidoRapido.Contracts/PedidoRapido.Contracts.csproj",
+  "expectedPackageFiles": [
+    "/home/artur/.nuget/packages/microsoft.netcore.app.ref/8.0.28/microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
+    "/home/artur/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.28/microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
