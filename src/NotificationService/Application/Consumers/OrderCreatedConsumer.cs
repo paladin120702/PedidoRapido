@@ -1,3 +1,4 @@
+using System.Globalization;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 using PedidoRapido.Contracts.Events;
@@ -20,13 +21,14 @@ public sealed class OrderCreatedConsumer : IConsumer<OrderCreatedEvent>
     public Task Consume(ConsumeContext<OrderCreatedEvent> context)
     {
         var order = context.Message;
+        var totalFormatted = order.TotalPrice.ToString("C", new CultureInfo("pt-BR"));
 
         _logger.LogInformation(
-            "NOTIFICATION: New order received! OrderId: {OrderId} | Customer: {Customer} | Product: {Product} | Total: {Total:C} | At: {CreatedAt}",
+            "NOTIFICATION: New order received! OrderId: {OrderId} | Customer: {Customer} | Product: {Product} | Total: {Total} | At: {CreatedAt}",
             order.OrderId,
             order.CustomerName,
             order.ProductName,
-            order.TotalPrice,
+            totalFormatted,
             order.CreatedAt);
 
         return Task.CompletedTask;
